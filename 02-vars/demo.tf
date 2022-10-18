@@ -27,7 +27,7 @@ variable "example-list" {
         "DevOps", 
         100,
         false,
-        "Verma"
+        "Shelby"
     ]
 }
 
@@ -40,7 +40,7 @@ output "ex-list" {
 variable "example-map" {
     default = {
         Class    = "DevOps",
-        Timings  = "0730AMIST",
+        Timings  = "0730AM",
         Duration = 85
     }
 }
@@ -53,12 +53,16 @@ output "ex-map" {
 ###############
 variable "state" {}
 
-output "state-name" {
-    value = "Name of the state where trainer resides is ${var.state}"
-}
-
 variable "country" {}
 
 output "country-name" {
     value = "Name of the country where trainer resides is ${var.country}"
+}
+
+output "city-name" {
+    value = "Name of the city where trainer resides is ${var.city}"
+}
+
+output "trainer-name" {
+    value = "Name of the trainer is ${var.trainer}"
 }
