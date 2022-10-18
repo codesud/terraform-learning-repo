@@ -41,7 +41,7 @@ variable "example-map" {
     default = {
         Class    = "DevOps",
         Timings  = "0730AM",
-        Duration = 85
+        Duration = 100
     }
 }
 
@@ -51,9 +51,9 @@ output "ex-map" {
 
 
 ###############
-variable "state" {}
-
 variable "country" {}
+
+variable "city" {}
 
 output "country-name" {
     value = "Name of the country where trainer resides is ${var.country}"
