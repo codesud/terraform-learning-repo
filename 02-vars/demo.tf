@@ -52,8 +52,8 @@ output "ex-map" {
 
 ###############
 variable "country" {}
-
 variable "city" {}
+variable "trainer" {}
 
 output "country-name" {
     value = "Name of the country where trainer resides is ${var.country}"
