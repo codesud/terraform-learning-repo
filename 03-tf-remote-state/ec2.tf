@@ -1,6 +1,6 @@
 # Creates EC2
 resource "aws_instance" "b49-ec2" {
-  ami                     = "ami-063dd2bd5641ef903"
+  ami                     = "ami-063dd2bd5641ef903"  # This Centos7 image has Ansible
   instance_type           = "t3.micro"
   vpc_security_group_ids  = [aws_security_group.allow_ssh.id]
 
