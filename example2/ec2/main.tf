@@ -5,6 +5,21 @@ resource "aws_instance" "b49-ec2" {
   vpc_security_group_ids  = [var.sg]
 }
 
+  provisioner "remote-exec" {
+
+      connection {
+        type     = "ssh"
+        user     = "centos"
+        password = "DevOps321"
+        host     = self.public_ip
+      }
+
+    inline = [
+     "ansible-pull -U https://github.com/CodingSudeep/ansible.git -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=3.0.0 roboshop.yml"
+    ]
+  }
+
+
 variable "sg" {}
 
 output "pub-ip" {
