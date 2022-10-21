@@ -17,8 +17,8 @@ resource "aws_spot_instance_request" "cheap_worker" {
   } 
    
   provisioner "remote-exec" {
-  inline = [
-    "ansible-pull -U https://github.com/CodingSudeep/ansible.git -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION} roboshop.yml"
-    ]
+    inline = [
+      "ansible-pull -U https://github.com/CodingSudeep/ansible.git -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION} roboshop.yml"
+      ]
   }
 }
