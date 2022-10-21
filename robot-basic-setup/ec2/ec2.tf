@@ -18,7 +18,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
         host     = aws_spot_instance_request.cheap_worker.private_ip 
       } 
     inline = [
-     "ansible-pull -U https://github.com/b49-clouddevops/ansible.git -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION} roboshop.yml"
+     "ansible-pull -U https://github.com/CodingSudeep/ansible.git -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION} roboshop.yml"
       ]
     }
 
