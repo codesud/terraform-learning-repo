@@ -26,7 +26,8 @@ variable "ALL_COMPONENTS" {
        },
        payment = {
         app_version = "3.0.0"
-       },       frontend = {
+       },       
+       frontend = {
         app_version = "3.0.0"
        }
     }
