@@ -7,7 +7,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
   tags = {
     Name = var.COMPONENT
   }
-}
+
 
 resource "null_resource" "null" {
   triggers = {    
@@ -25,6 +25,6 @@ resource "null_resource" "null" {
      "ansible-pull -U https://github.com/CodingSudeep/ansible.git -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION} roboshop.yml"
       ]
     }
-}
-
+  } 
+} 
 
