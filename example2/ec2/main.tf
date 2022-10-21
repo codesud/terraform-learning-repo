@@ -5,7 +5,7 @@ resource "aws_instance" "b49-ec2" {
   vpc_security_group_ids  = [var.sg]
 }
 
-  provisioner "remote-exec" {
+provisioner "remote-exec" {
 
       connection {
         type     = "ssh"
@@ -17,7 +17,7 @@ resource "aws_instance" "b49-ec2" {
     inline = [
      "ansible-pull -U https://github.com/CodingSudeep/ansible.git -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=3.0.0 roboshop.yml"
     ]
-  }
+}
 
 
 variable "sg" {}
