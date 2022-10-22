@@ -11,7 +11,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
 
 resource "null_resource" "null" {
   triggers = {
-    timestamp()
+    a = timestamp()
   }
 provisioner "remote-exec" {  
   connection {
